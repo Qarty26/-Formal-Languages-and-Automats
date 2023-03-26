@@ -1,7 +1,6 @@
 #include <iostream>
 #include <cstring>
 #include <fstream>
-#include<bits/stdc++.h>
 using namespace std;
 ifstream in("date.in");
 ofstream out("date.out");
@@ -34,45 +33,23 @@ void cautare(char M[100][100][10],int nrStari,int lungimeActuala,int stareActual
     {
         if(strcmp(M[stareActuala][j],"#")!=0 && lungimeActuala!=lungimeMax)
         {
-            ///inlocuieste while cu un for care ia pe rand litere din muchie
-            /*
-            while(M[stareActuala][j][0]!=NULL)
-            {
-                cuv[lungimeActuala]=M[stareActuala][j][0];
-                cautare(M,nrStari,lungimeActuala+1,j,cuv);
-                strcpy(M[stareActuala][j],M[stareActuala][j]+1);
-            }
-            */
-
             for(int i=0;i<strlen(M[stareActuala][j]);i++)
             {
                 cuv[lungimeActuala]=M[stareActuala][j][i];
                 for(int k=lungimeActuala+1;k<lungimeMax;k++)
+                {
                    cuv[k]=' ';
-
+                }
                 cautare(M,nrStari,lungimeActuala+1,j,cuv);
-
             }
-
-
         }
-
     }
 }
 
 
 int main()
 {
-/*
-    char test[1000];
-    strcpy(test,"abcdef");
-    while(test[0]!=NULL)
-    {
-        cout<<test[0]<<endl;
-        strcpy(test,test+1);
-    }
 
-*/
     int nrStari,stareInitiala,nrMuchii,st,dr,i,j;
     char M[100][100][10],val[100];
 
