@@ -41,18 +41,18 @@ void cautare(char M[100][100][10],int nrStari,int lungimeActuala,int stareActual
     for(int i=0;i<nrStariFinale;i++)
         if(stareActuala==stareFinala[i])
         {
+            if(fout==false)
+            {
+                cout<<cuv<<endl;
+                break;
+            }
 
-        if(fout==false)
-        {
-            cout<<cuv<<endl;
-            break;
+            else
+            {
+                out<<cuv<<endl;
+                break;
+            }
         }
-
-        else
-            out<<cuv<<endl;
-            break;
-        }
-
 
 
     for(int j=0;j<nrStari;j++)
