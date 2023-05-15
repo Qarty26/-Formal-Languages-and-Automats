@@ -1,3 +1,6 @@
-S 3 aS bS cC
-C 2 cC dD
-D 2 xS d
+S 2 aA dE
+A 2 aB aS
+B 1 bC
+C 2 bD dB
+D 3 cD e ^
+E 1 d
